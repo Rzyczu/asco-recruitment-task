@@ -24,10 +24,16 @@
         @custom-media --min-md (min-width: 768px);
 
         /* custom styles */
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
         body {
             padding: 0;
             margin: 0;
-            height: 100%;
+            min-height: 100dvh;
         }
 
         .container {
@@ -43,10 +49,6 @@
         h6 {
             margin: 0 0;
             color: #47525e;
-        }
-
-        section {
-            min-height: 300px;
         }
 
         .row:has(> article) {
@@ -152,6 +154,14 @@
             }
         }
 
+        .main-item>section {
+            min-height: 15rem;
+        }
+
+        .footer-item>section {
+            min-height: 1.7rem;
+        }
+
         /* footer */
         .footer {
             padding: 3rem 0;
@@ -221,7 +231,7 @@
 
     <main>
         <div class="container">
-            <div class="row gx-5 gap ms-0">
+            <div class="row gx-5 gap ms-0 main-item">
                 <section class="bg-secondary rounded col-lg-3 mb-lg-3">
                 </section>
                 <section class="col-lg-9">
@@ -264,9 +274,9 @@
         <div class="container d-flex">
             <div class="footer-container lh-lg">
                 <div class="footer-item">
-                    <div class="bg-primary rounded">
-                        <span>.</span>
-                    </div>
+                    <section class="bg-primary rounded">
+                        <span></span>
+                    </section>
                 </div>
                 <div class="footer-item">
                     <ul class="list-unstyled">
